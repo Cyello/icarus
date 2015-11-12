@@ -1,0 +1,4 @@
+services:
+#    rodrigo_icarus.example:
+#        class: Rodrigo\IcarusBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

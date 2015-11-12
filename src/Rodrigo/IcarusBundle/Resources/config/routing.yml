@@ -1,0 +1,3 @@
+rodrigo_icarus_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: RodrigoIcarusBundle:Default:index }
