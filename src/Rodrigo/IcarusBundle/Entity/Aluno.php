@@ -1,5 +1,11 @@
 <?php
 
+/**
+ *
+ * TODO: Inserir Marcação de mapeamento!
+ *
+ **/
+
 namespace Rodrigo\IcarusBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
@@ -21,21 +27,34 @@ class Aluno
      */
     private $id;
 
-    private $nome;
-    private $data_de_nascimento;
-    private $idade;
-    private $endereco;
-
-    private $responsavel
-
-    /*
-     * ESTES CAMPOS FARÃO PARTE DA ENTIDADE RESPONSÁVEL *
+    /**
+     * @var string
      *
-      private $nome_do_pai; // opcional
-      private $nome_da_mae;
-      private $rg_do_pai; // opcional
-      private $rg_da_mae;
-    */
+     * @ORM\Column(name="nome", type="string", length=100)
+     */
+    private $nome;
+
+    /**
+     * @var date
+     *
+     * @ORM\Column(name="data_de_nascimento", type="date")
+     */
+    private $data_de_nascimento;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idade", type="integer")
+     */
+    private $idade;
+
+    /**
+     * @var Responsavel
+     *
+     * @ORM\ManyToOne() // <= Setar valores da função!
+     */
+    private $responsavel // Relacionamento ManyToOne -> Responsavel [entity]
+
 
     /**
      * Get id

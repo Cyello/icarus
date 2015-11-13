@@ -1,5 +1,11 @@
 <?php
 
+/**
+ *
+ * TODO: Inserir Marcação de mapeamento!
+ *
+ **/
+
 namespace Rodrigo\IcarusBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
@@ -21,6 +27,15 @@ class Responsavel
      */
     private $id;
 
+    private $alunos; // Relacionamento OneToMany Aluno[entity] { Responavel( pai ) de um ou mais Alunos Matriculados na Escola }
+    
+    private $nome; // opcional
+
+    private $rg;
+
+    private $cpf;
+
+    private $endereco;
 
     /**
      * Get id
